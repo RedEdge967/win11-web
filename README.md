@@ -7,8 +7,12 @@
 - Desktop
 - Start menu
 - settings interface
+- Weather
 
 ## Preview
-![Capture14](https://user-images.githubusercontent.com/91379432/141099234-a0c530e9-0cdf-4ad5-a919-d57903c373f9.PNG)
+![Capture14](https://user-images.githubusercontent.com/91379432/141263285-5f864d85-5172-4447-9e9f-e3b73f80bd63.PNG)
+![Capture15](https://user-images.githubusercontent.com/91379432/141263329-f884635b-fe2c-4822-8186-4372ee9baa0b.PNG)
+![Capture16](https://user-images.githubusercontent.com/91379432/141263360-62dc9a0a-38b4-4505-8d29-5ea9316a45ce.PNG)
+
 
 Link: https://win11ui.netlify.app
