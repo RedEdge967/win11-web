@@ -1,7 +1,7 @@
 # Windows11-UI
 
 ## What is Windows11-UI
-- Windows11-UI is a web based windows 11 simulator with limited features.
+- Windows11-UI is a web based windows 11 simulator with some features.
 
 ## Features of Windows11-UI
 - Desktop
