@@ -10,9 +10,11 @@
 - Weather
 
 ## Preview
-![Capture14](https://user-images.githubusercontent.com/91379432/141263285-5f864d85-5172-4447-9e9f-e3b73f80bd63.PNG)
-![Capture15](https://user-images.githubusercontent.com/91379432/141263329-f884635b-fe2c-4822-8186-4372ee9baa0b.PNG)
-![Capture16](https://user-images.githubusercontent.com/91379432/141263360-62dc9a0a-38b4-4505-8d29-5ea9316a45ce.PNG)
+![Capture28](https://user-images.githubusercontent.com/91379432/142870022-0544f31d-9f0b-4540-a562-8084988fe9ca.PNG)
+![Capture29](https://user-images.githubusercontent.com/91379432/142870129-3d452be8-3ef6-4d88-b80a-7b6e9a963c29.PNG)
+![Capture30](https://user-images.githubusercontent.com/91379432/142870195-7e31083b-a38e-4d10-9db6-957ac731c3eb.PNG)
+![Capture31](https://user-images.githubusercontent.com/91379432/142870234-36ee8a5b-6dbc-4638-b5c2-5dfbad77131a.PNG)
+
 
 
 Link: https://rededge967.github.io/Win11-Web/
