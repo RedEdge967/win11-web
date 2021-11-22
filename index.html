@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Windows 11 UI Design</title>
+  <link
+  rel="stylesheet"
+  href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+/><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="panel weatherPanel" onmousedown="FocusWindow('weather')" style="display:none;" id="weatherPanel">
+    <div class="header noselect">
+      <div class="headerIcons">
+        <i class="ms-Icon ms-Icon--ChromeMinimize" id="welcomeMinimize" aria-hidden="true" onClick="MinimizeWindow('weather')"></i>
+        <i class="ms-Icon ms-Icon--ChromeClose" id="welcomeClose" aria-hidden="true" onClick="CloseWindow('weather')"></i>
+      </div>
+    </div>
+    <div class="panel-inner">
+      <div class="panel-left">
+        <div class="panel-left-highlow-text">
+          High 74° F <br />
+          Low 57° F<br />
+        </div>
+        <div class="panel-left-locationdate-text">
+          Colombo, <br />Sri Lanka<br /><br />
+        </div>
+        <div class="panel-left-day">
+          Tomorrow 74° <i class="ms-Icon ms-Icon--Sunny" aria-hidden="true"></i>
+        </div>
+        <div class="panel-left-day">
+          Wednesday 72° <i class="ms-Icon ms-Icon--Rain" aria-hidden="true"></i>
+        </div>
+        <div class="panel-left-day">
+          Thursday 72° <i class="ms-Icon ms-Icon--Fog" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="panel-right">
+      <div class="weatherTemperature">65° F<br /><small>Cloudy</small></div>
+    </div>
+    <div class="cloud">
+    </div>
+  </div>
+  <div class="panel startMenuPanel noselect" style="display:none" id="startMenuPanel">
+    <div class="startMenuContainer">
+      Pinned
+      <div class="allAppsButton">
+        <small style="opacity: .8">All apps ></small>
+      </div>
+    </div>
+    <div class="iconRow">
+      <div class="startMenuIcon">
+        <svg class="startMenuIcon-Inner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <defs>
+            <radialGradient id="b" cx="161.83" cy="68.91" r="95.38" gradientTransform="matrix(1 0 0 -.95 0 248.84)" gradientUnits="userSpaceOnUse">
+              <stop offset=".72" stop-opacity="0" />
+              <stop offset=".95" stop-opacity=".53" />
+              <stop offset="1" />
+            </radialGradient>
+            <radialGradient id="d" cx="-340.29" cy="62.99" r="143.24" gradientTransform="matrix(.15 -.99 -.8 -.12 176.64 -125.4)" gradientUnits="userSpaceOnUse">
+              <stop offset=".76" stop-opacity="0" />
+              <stop offset=".95" stop-opacity=".5" />
+              <stop offset="1" />
+            </radialGradient>
+            <radialGradient id="e" cx="113.37" cy="570.21" r="202.43" gradientTransform="matrix(-.04 1 2.13 .08 -1179.54 -106.69)" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#35c1f1" />
+              <stop offset=".11" stop-color="#34c1ed" />
+              <stop offset=".23" stop-color="#2fc2df" />
+              <stop offset=".31" stop-color="#2bc3d2" />
+              <stop offset=".67" stop-color="#36c752" />
+            </radialGradient>
+            <radialGradient id="f" cx="376.52" cy="567.97" r="97.34" gradientTransform="matrix(.28 .96 .78 -.23 -303.76 -148.5)" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#66eb6e" />
+              <stop offset="1" stop-color="#66eb6e" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="a" x1="63.33" y1="84.03" x2="241.67" y2="84.03" gradientTransform="matrix(1 0 0 -1 0 266)" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#0c59a4" />
+              <stop offset="1" stop-color="#114a8b" />
+            </linearGradient>
+            <linearGradient id="c" x1="157.35" y1="161.39" x2="45.96" y2="40.06" gradientTransform="matrix(1 0 0 -1 0 266)" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#1b9de2" />
+              <stop offset=".16" stop-color="#1595df" />
+              <stop offset=".67" stop-color="#0680d7" />
+              <stop offset="1" stop-color="#0078d4" />
+            </linearGradient>
+          </defs>
+          <path d="M235.68 195.46a93.73 93.73 0 01-10.54 4.71 101.87 101.87 0 01-35.9 6.46c-47.32 0-88.54-32.55-88.54-74.32A31.48 31.48 0 01117.13 105c-42.8 1.8-53.8 46.4-53.8 72.53 0 73.88 68.09 81.37 82.76 81.37 7.91 0 19.84-2.3 27-4.56l1.31-.44a128.34 128.34 0 0066.6-52.8 4 4 0 00-5.32-5.64z" transform="translate(-4.63 -4.92)" fill="url(#a)" />
+          <path d="M235.68 195.46a93.73 93.73 0 01-10.54 4.71 101.87 101.87 0 01-35.9 6.46c-47.32 0-88.54-32.55-88.54-74.32A31.48 31.48 0 01117.13 105c-42.8 1.8-53.8 46.4-53.8 72.53 0 73.88 68.09 81.37 82.76 81.37 7.91 0 19.84-2.3 27-4.56l1.31-.44a128.34 128.34 0 0066.6-52.8 4 4 0 00-5.32-5.64z" transform="translate(-4.63 -4.92)" style="isolation:isolate" opacity=".35" fill="url(#b)" />
+          <path d="M110.34 246.34A79.2 79.2 0 0187.6 225a80.72 80.72 0 0129.53-120c3.12-1.47 8.45-4.13 15.54-4a32.35 32.35 0 0125.69 13 31.88 31.88 0 016.36 18.66c0-.21 24.46-79.6-80-79.6-43.9 0-80 41.66-80 78.21a130.15 130.15 0 0012.11 56 128 128 0 00156.38 67.11 75.55 75.55 0 01-62.78-8z" transform="translate(-4.63 -4.92)" fill="url(#c)" />
+          <path d="M110.34 246.34A79.2 79.2 0 0187.6 225a80.72 80.72 0 0129.53-120c3.12-1.47 8.45-4.13 15.54-4a32.35 32.35 0 0125.69 13 31.88 31.88 0 016.36 18.66c0-.21 24.46-79.6-80-79.6-43.9 0-80 41.66-80 78.21a130.15 130.15 0 0012.11 56 128 128 0 00156.38 67.11 75.55 75.55 0 01-62.78-8z" transform="translate(-4.63 -4.92)" style="isolation:isolate" opacity=".41" fill="url(#d)" />
+          <path d="M156.94 153.78c-.81 1.05-3.3 2.5-3.3 5.66 0 2.61 1.7 5.12 4.72 7.23 14.38 10 41.49 8.68 41.56 8.68a59.56 59.56 0 0030.27-8.35 61.38 61.38 0 0030.43-52.88c.26-22.41-8-37.31-11.34-43.91-21.19-41.45-66.93-65.29-116.67-65.29a128 128 0 00-128 126.2c.48-36.54 36.8-66.05 80-66.05 3.5 0 23.46.34 42 10.07 16.34 8.58 24.9 18.94 30.85 29.21 6.18 10.67 7.28 24.15 7.28 29.52s-2.74 13.33-7.8 19.91z" transform="translate(-4.63 -4.92)" fill="url(#e)" />
+          <path d="M156.94 153.78c-.81 1.05-3.3 2.5-3.3 5.66 0 2.61 1.7 5.12 4.72 7.23 14.38 10 41.49 8.68 41.56 8.68a59.56 59.56 0 0030.27-8.35 61.38 61.38 0 0030.43-52.88c.26-22.41-8-37.31-11.34-43.91-21.19-41.45-66.93-65.29-116.67-65.29a128 128 0 00-128 126.2c.48-36.54 36.8-66.05 80-66.05 3.5 0 23.46.34 42 10.07 16.34 8.58 24.9 18.94 30.85 29.21 6.18 10.67 7.28 24.15 7.28 29.52s-2.74 13.33-7.8 19.91z" transform="translate(-4.63 -4.92)" fill="url(#f)" />
+        </svg>
+        <div class="startMenuIconText">
+          Edge
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/word_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Word
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/excel_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Excel
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/powerpoint_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          PowerPoint
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/outlook_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Outlook
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="35px" height="35px">
+          <path fill="#1976d2" d="M28,13h14.533C43.343,13,44,13.657,44,14.467v19.066C44,34.343,43.343,35,42.533,35H28V13z" />
+          <rect width="14" height="15.542" x="28" y="17.958" fill="#fff" />
+          <polygon fill="#1976d2" points="27,44 4,39.5 4,8.5 27,4" />
+          <path fill="#fff" d="M15.25,16.5c-3.176,0-5.75,3.358-5.75,7.5s2.574,7.5,5.75,7.5S21,28.142,21,24	S18.426,16.5,15.25,16.5z M15,28.5c-1.657,0-3-2.015-3-4.5s1.343-4.5,3-4.5s3,2.015,3,4.5S16.657,28.5,15,28.5z" />
+          <rect width="2.7" height="2.9" x="28.047" y="29.737" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="31.448" y="29.737" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="34.849" y="29.737" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="28.047" y="26.159" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="31.448" y="26.159" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="34.849" y="26.159" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="38.25" y="26.159" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="28.047" y="22.706" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="31.448" y="22.706" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="34.849" y="22.706" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="38.25" y="22.706" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="31.448" y="19.112" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="34.849" y="19.112" fill="#1976d2" />
+          <rect width="2.7" height="2.9" x="38.25" y="19.112" fill="#1976d2" />
+        </svg>
+        <div class="startMenuIconText">
+          Calendar
+        </div>
+      </div>
+    </div>
+    <div class="iconRow mt50">
+      <div class="startMenuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40px" height="40px">
+          <radialGradient id="2Jwv7LuZrao5GsFL~0k11a" cx="24" cy="18.435" r="40.735" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#dfe9f2" />
+            <stop offset=".543" stop-color="#d6e0e9" />
+            <stop offset="1" stop-color="#bfc8d1" />
+          </radialGradient>
+          <path fill="url(#2Jwv7LuZrao5GsFL~0k11a)" d="M44,24c0,4.37-1.4,8.41-3.79,11.7c-0.66,0.93-1.41,1.8-2.23,2.59C34.37,41.82,29.44,44,24,44	s-10.37-2.18-13.98-5.71C9.2,37.5,8.45,36.63,7.79,35.7C5.4,32.41,4,28.37,4,24c0-5.69,2.37-10.81,6.18-14.45	c1-0.96,2.1-1.81,3.28-2.54C16.52,5.1,20.13,4,24,4s7.48,1.1,10.54,3.01c1.18,0.73,2.28,1.58,3.28,2.54C41.63,13.19,44,18.31,44,24z" />
+          <radialGradient id="2Jwv7LuZrao5GsFL~0k11b" cx="23.891" cy="14.717" r="19.79" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4caf50" />
+            <stop offset=".489" stop-color="#4aaf50" />
+            <stop offset=".665" stop-color="#43ad50" />
+            <stop offset=".79" stop-color="#38aa50" />
+            <stop offset=".892" stop-color="#27a550" />
+            <stop offset=".978" stop-color="#11a050" />
+            <stop offset="1" stop-color="#0a9e50" />
+          </radialGradient>
+          <path fill="url(#2Jwv7LuZrao5GsFL~0k11b)" d="M40.21,35.7c-0.66,0.93-1.41,1.8-2.23,2.59c-0.07-0.61-0.31-2.47-0.98-3.79	c-1.5-3-8-11-13-14.5c-5,3.5-11.5,11.5-13,14.5c-0.67,1.32-0.91,3.18-0.98,3.79C9.2,37.5,8.45,36.63,7.79,35.7	C7.76,35.08,7.8,34.2,8,33c0.74-4.47,8.5-16,11-18c-3.4-3.4-6.8-4.91-8.82-5.45c1-0.96,2.1-1.81,3.28-2.54	C19.15,7.1,22.05,9.03,24,10c1.95-0.97,4.85-2.9,10.54-2.99c1.18,0.73,2.28,1.58,3.28,2.54C35.8,10.09,32.4,11.6,29,15	c2.5,2,10.26,13.53,11,18C40.2,34.2,40.24,35.08,40.21,35.7z" />
+        </svg>
+        <div class="startMenuIconText">
+          Xbox
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="40px" height="40px">
+          <path d="M 25 4 L 4 17.34375 L 4 32.652344 L 25 46 L 46 32.65625 L 46 17.34375 Z M 25 29.183594 L 19.066406 25.070313 L 25 21.023438 L 30.933594 25.070313 Z M 27 17.605469 L 27 9.949219 L 40.429688 18.484375 L 34.410156 22.65625 Z M 23 17.605469 L 15.589844 22.65625 L 9.570313 18.484375 L 23 9.949219 Z M 12.09375 25.042969 L 8 27.832031 L 8 22.203125 Z M 15.570313 27.453125 L 23 32.605469 L 23 40.050781 L 9.589844 31.527344 Z M 27 32.605469 L 34.429688 27.453125 L 40.410156 31.527344 L 27 40.050781 Z M 37.90625 25.042969 L 42 22.203125 L 42 27.832031 Z" />
+        </svg>
+        <div class="startMenuIconText">
+          CodePen
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="40px" height="40px">
+          <path fill="#424242" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z" />
+          <path fill="#b71c1c" d="M31,12h-5v23.5c2.5,0,4.986,0.512,5,0.5S31,12,31,12z" />
+          <path fill="#b71c1c" d="M17,12h5v23.5c-2.5,0-4.986,0.512-5,0.5S17,12,17,12z" />
+          <path fill="#e53935" d="M22,12h-5l9,23.5c2.5,0,4.986,0.512,5,0.5S22,12,22,12z" />
+        </svg>
+        <div class="startMenuIconText">
+          Netflix
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/teams_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Teams
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/access_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Access
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/office_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Office
+        </div>
+      </div>
+    </div>
+    <div class="iconRow mt50">
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/onedrive_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          OneDrive
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/onenote_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          OneNote
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/project_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          Project
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/sharepoint_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        <div class="startMenuIconText">
+          SharePoint
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="38px" height="38px">
+          <linearGradient id="tS~Tu1dsT5kMXF2Lct~HUa" x1="24.001" x2="24.001" y1="-4.765" y2="56.31" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4caf50" />
+            <stop offset=".489" stop-color="#4aaf50" />
+            <stop offset=".665" stop-color="#43ad50" />
+            <stop offset=".79" stop-color="#38aa50" />
+            <stop offset=".892" stop-color="#27a550" />
+            <stop offset=".978" stop-color="#11a050" />
+            <stop offset="1" stop-color="#0a9e50" />
+          </linearGradient>
+          <path fill="url(#tS~Tu1dsT5kMXF2Lct~HUa)" d="M24.001,4c-11.077,0-20,8.923-20,20s8.923,20,20,20c11.076,0,20-8.923,20-20	S35.077,4,24.001,4z" />
+          <path d="M21.224,15.938c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 c-0.145,1.023-0.877,1.755-1.899,1.755c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217 c-2.631,0-5.262,0.293-7.6,0.877c-0.293,0-0.585,0.146-1.023,0.146c-0.075,0.011-0.149,0.016-0.221,0.016 c-0.905,0-1.533-0.821-1.533-1.77c0-1.023,0.585-1.607,1.315-1.754C14.939,16.231,17.862,15.938,21.224,15.938 M20.785,22.369 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461c0,0.878-0.585,1.608-1.462,1.608 c-0.438,0-0.73-0.144-1.023-0.291c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733 c-0.439,0.144-0.585,0.144-0.877,0.144c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607 C15.523,22.808,17.716,22.369,20.785,22.369 M21.223,28.654c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314c-0.146,0.586-0.731,1.023-1.315,1.023c-0.292,0-0.585-0.145-0.877-0.292 c-2.777-1.607-6.139-2.484-9.792-2.484c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146 c-0.731,0-1.169-0.586-1.169-1.17c0-0.73,0.438-1.17,1.023-1.314C16.4,28.945,18.739,28.654,21.223,28.654 M21.224,14.938 c-3.789,0-6.666,0.371-9.317,1.202c-1.254,0.279-2.06,1.341-2.06,2.722c0,1.553,1.112,2.77,2.533,2.77 c0.095,0,0.192-0.005,0.291-0.017c0.319-0.007,0.574-0.065,0.764-0.107c0.068-0.015,0.13-0.035,0.193-0.038h0.123l0.116-0.03 c2.219-0.554,4.763-0.847,7.358-0.847c5.073,0,10.075,1.152,13.381,3.081l0.09,0.053l0.099,0.033 c0.109,0.036,0.195,0.073,0.273,0.105c0.251,0.105,0.563,0.236,1.065,0.236c1.483,0,2.671-1.075,2.889-2.615l0.01-0.07v-0.071 c0-1.171-0.564-2.13-1.549-2.635C33.238,16.313,27.314,14.938,21.224,14.938L21.224,14.938z M20.785,21.369 c-3.291,0-5.651,0.508-7.711,1.057l-0.058,0.015l-0.055,0.022c-1.194,0.476-1.799,1.329-1.799,2.536 c0,1.357,1.104,2.461,2.462,2.461c0.371,0,0.626-0.009,1.189-0.194c1.572-0.429,3.714-0.683,5.827-0.683 c4.441,0,8.562,1.037,11.603,2.921l0.038,0.024l0.04,0.02c0.334,0.168,0.792,0.397,1.471,0.397c1.404,0,2.462-1.121,2.462-2.608 c0-0.996-0.53-1.886-1.387-2.334C31.04,22.659,26.04,21.369,20.785,21.369L20.785,21.369z M21.223,27.654 c-2.547,0-4.969,0.297-7.404,0.907c-1.096,0.27-1.78,1.145-1.78,2.284c0,1.217,0.953,2.17,2.169,2.17 c0.172,0,0.334-0.037,0.522-0.079c0.101-0.023,0.288-0.065,0.357-0.067l0.101-0.003l0.122-0.023 c2.023-0.467,3.963-0.704,5.768-0.704c3.422,0,6.635,0.812,9.291,2.35l0.025,0.015l0.026,0.013 c0.334,0.168,0.792,0.399,1.327,0.399c1.05,0,2.032-0.766,2.285-1.781l0.03-0.119v-0.123c0-1.202-0.595-1.76-1.178-2.147 l-0.022-0.014l-0.022-0.013C29.455,28.713,25.437,27.654,21.223,27.654L21.223,27.654z" opacity=".05" />
+          <path d="M21.224,15.938c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 c-0.145,1.023-0.877,1.755-1.899,1.755c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217 c-2.631,0-5.262,0.293-7.6,0.877c-0.293,0-0.585,0.146-1.023,0.146c-0.075,0.011-0.149,0.016-0.221,0.016 c-0.905,0-1.533-0.821-1.533-1.77c0-1.023,0.585-1.607,1.315-1.754C14.939,16.231,17.862,15.938,21.224,15.938 M20.785,22.369 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461c0,0.878-0.585,1.608-1.462,1.608 c-0.438,0-0.73-0.144-1.023-0.291c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733 c-0.439,0.144-0.585,0.144-0.877,0.144c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607 C15.523,22.808,17.716,22.369,20.785,22.369 M21.223,28.654c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314c-0.146,0.586-0.731,1.023-1.315,1.023c-0.292,0-0.585-0.145-0.877-0.292 c-2.777-1.607-6.139-2.484-9.792-2.484c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146 c-0.731,0-1.169-0.586-1.169-1.17c0-0.73,0.438-1.17,1.023-1.314C16.4,28.945,18.739,28.654,21.223,28.654 M21.224,15.438 c-3.747,0-6.582,0.366-9.188,1.186c-1.042,0.222-1.689,1.078-1.689,2.238c0,1.273,0.893,2.27,2.033,2.27 c0.084,0,0.169-0.005,0.257-0.016c0.28-0.004,0.506-0.055,0.689-0.096c0.119-0.027,0.222-0.05,0.299-0.05h0.061l0.06-0.015 c2.258-0.564,4.844-0.862,7.479-0.862c5.158,0,10.254,1.177,13.633,3.149l0.045,0.026l0.05,0.016 c0.123,0.041,0.221,0.082,0.309,0.119c0.231,0.097,0.47,0.197,0.871,0.197c1.247,0,2.209-0.878,2.394-2.185l0.005-0.035v-0.035 c0-0.985-0.473-1.787-1.298-2.201C33.083,16.794,27.24,15.438,21.224,15.438L21.224,15.438z M20.785,21.869 c-3.054,0-5.24,0.416-7.583,1.04l-0.029,0.008l-0.028,0.011c-0.637,0.254-1.484,0.745-1.484,2.071c0,0.943,0.75,1.961,1.962,1.961 c0.34,0,0.541-0.008,1.033-0.169c1.637-0.447,3.827-0.708,5.983-0.708c4.533,0,8.747,1.064,11.867,2.996 c0.345,0.175,0.725,0.366,1.286,0.366c1.119,0,1.962-0.906,1.962-2.108c0-0.823-0.442-1.554-1.154-1.909 C30.885,23.141,25.965,21.869,20.785,21.869L20.785,21.869z M21.223,28.154c-2.506,0-4.888,0.292-7.283,0.892 c-0.864,0.213-1.401,0.902-1.401,1.799c0,0.821,0.624,1.67,1.669,1.67c0.116,0,0.246-0.029,0.411-0.067 c0.148-0.033,0.351-0.079,0.466-0.079h0.057l0.056-0.013c2.06-0.476,4.038-0.717,5.88-0.717c3.51,0,6.809,0.836,9.542,2.417 c0.331,0.168,0.712,0.359,1.127,0.359c0.827,0,1.601-0.603,1.8-1.402l0.015-0.06v-0.061c0-1.012-0.493-1.424-0.954-1.73 C29.277,29.189,25.348,28.154,21.223,28.154L21.223,28.154z" opacity=".07" />
+          <path fill="#fff" d="M31.747,33.915c-0.292,0-0.585-0.145-0.877-0.292c-2.777-1.607-6.139-2.484-9.792-2.484 c-2.047,0-4.093,0.291-5.993,0.73c-0.292,0-0.731,0.146-0.877,0.146c-0.731,0-1.169-0.586-1.169-1.17 c0-0.73,0.438-1.17,1.023-1.314c2.338-0.586,4.677-0.877,7.161-0.877c4.093,0,7.893,1.021,11.108,2.924 c0.438,0.291,0.731,0.584,0.731,1.314C32.916,33.478,32.331,33.915,31.747,33.915z M33.793,28.945c-0.438,0-0.73-0.144-1.023-0.291 c-3.068-1.9-7.308-3.071-12.13-3.071c-2.339,0-4.531,0.293-6.139,0.733c-0.439,0.144-0.585,0.144-0.877,0.144 c-0.877,0-1.462-0.73-1.462-1.461c0-0.877,0.439-1.316,1.169-1.607c2.192-0.584,4.385-1.023,7.454-1.023 c4.97,0,9.793,1.17,13.593,3.507c0.584,0.291,0.877,0.877,0.877,1.461C35.255,28.215,34.67,28.945,33.793,28.945z M36.132,23.101 c-0.438,0-0.585-0.146-1.023-0.291c-3.508-2.047-8.769-3.217-13.885-3.217c-2.631,0-5.262,0.293-7.6,0.877 c-0.293,0-0.585,0.146-1.023,0.146c-1.023,0.146-1.754-0.73-1.754-1.754c0-1.023,0.585-1.607,1.315-1.754 c2.777-0.877,5.7-1.17,9.062-1.17c5.554,0,11.4,1.17,15.785,3.654c0.584,0.293,1.022,0.877,1.022,1.754 C37.886,22.369,37.154,23.101,36.132,23.101z" />
+        </svg>
+        <div class="startMenuIconText">
+          Spotify
+        </div>
+      </div>
+      <div class="startMenuIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="40px" height="40px">
+          <path fill="#03A9F4" d="M6,10c0-2.209,1.791-4,4-4h28c2.209,0,4,1.791,4,4v28c0,2.209-1.791,4-4,4H10c-2.209,0-4-1.791-4-4V10z" />
+          <path fill="#020F16" d="M20.016,19.174h-2.002v4.434h1.973c0.547,0,0.97-0.179,1.27-0.537s0.449-0.879,0.449-1.563c0-0.71-0.153-1.274-0.459-1.694S20.53,19.181,20.016,19.174z" />
+          <path fill="#020F16" d="M9,9v30h30V9H9z M23.365,24.789C22.539,25.597,21.393,26,19.928,26h-1.914v5h-2.871V16.781h4.844c1.406,0,2.528,0.437,3.364,1.309s1.255,2.005,1.255,3.398S24.192,23.981,23.365,24.789z M32.682,30.336c-0.709,0.573-1.641,0.859-2.793,0.859c-0.775,0-1.459-0.151-2.051-0.454s-1.057-0.725-1.392-1.265s-0.503-1.123-0.503-1.748h2.627c0.014,0.481,0.125,0.843,0.337,1.084s0.558,0.361,1.04,0.361c0.742,0,1.113-0.335,1.113-1.006c0-0.234-0.112-0.451-0.337-0.649S30,27.052,29.225,26.713c-1.139-0.462-1.922-0.94-2.349-1.436s-0.64-1.11-0.64-1.846c0-0.925,0.334-1.688,1.001-2.29s1.552-0.903,2.651-0.903c1.158,0,2.086,0.3,2.783,0.898s1.045,1.403,1.045,2.412h-2.764c0-0.859-0.357-1.289-1.074-1.289c-0.293,0-0.533,0.091-0.723,0.273s-0.283,0.437-0.283,0.762c0,0.234,0.104,0.441,0.313,0.62s0.699,0.435,1.475,0.767c1.127,0.417,1.922,0.881,2.388,1.392s0.698,1.174,0.698,1.987C33.746,29.005,33.391,29.763,32.682,30.336z" />
+        </svg>
+        <div class="startMenuIconText">
+          Photoshop
+        </div>
+      </div>
+    </div>
+    <div class="startMenuContainer mt50">
+      Recommended
+      <div class="moreButton">
+        <small style="opacity: .8">More ></small>
+      </div>
+    </div>
+    <div class="iconRow">
+      <div class="startMenuRecommended">
+        <div class="startMenuRecommended-Icon ml25">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" width="40px" height="40px">
+            <path fill="#03A9F4" d="M6,10c0-2.209,1.791-4,4-4h28c2.209,0,4,1.791,4,4v28c0,2.209-1.791,4-4,4H10c-2.209,0-4-1.791-4-4V10z" />
+            <path fill="#020F16" d="M20.016,19.174h-2.002v4.434h1.973c0.547,0,0.97-0.179,1.27-0.537s0.449-0.879,0.449-1.563c0-0.71-0.153-1.274-0.459-1.694S20.53,19.181,20.016,19.174z" />
+            <path fill="#020F16" d="M9,9v30h30V9H9z M23.365,24.789C22.539,25.597,21.393,26,19.928,26h-1.914v5h-2.871V16.781h4.844c1.406,0,2.528,0.437,3.364,1.309s1.255,2.005,1.255,3.398S24.192,23.981,23.365,24.789z M32.682,30.336c-0.709,0.573-1.641,0.859-2.793,0.859c-0.775,0-1.459-0.151-2.051-0.454s-1.057-0.725-1.392-1.265s-0.503-1.123-0.503-1.748h2.627c0.014,0.481,0.125,0.843,0.337,1.084s0.558,0.361,1.04,0.361c0.742,0,1.113-0.335,1.113-1.006c0-0.234-0.112-0.451-0.337-0.649S30,27.052,29.225,26.713c-1.139-0.462-1.922-0.94-2.349-1.436s-0.64-1.11-0.64-1.846c0-0.925,0.334-1.688,1.001-2.29s1.552-0.903,2.651-0.903c1.158,0,2.086,0.3,2.783,0.898s1.045,1.403,1.045,2.412h-2.764c0-0.859-0.357-1.289-1.074-1.289c-0.293,0-0.533,0.091-0.723,0.273s-0.283,0.437-0.283,0.762c0,0.234,0.104,0.441,0.313,0.62s0.699,0.435,1.475,0.767c1.127,0.417,1.922,0.881,2.388,1.392s0.698,1.174,0.698,1.987C33.746,29.005,33.391,29.763,32.682,30.336z" />
+          </svg>
+        </div>
+        <div class="startMenuRecommended-Text ml10">
+          Adobe Photoshop <br /> <span class="lightText">Recently added</span>
+        </div>
+      </div>
+      <div class="startMenuRecommended">
+        <div class="startMenuRecommended-Icon">
+          <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/excel_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        </div>
+        <div class="startMenuRecommended-Text">
+          Excel <br /> <span class="lightText">17m ago</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="iconRow  mt20">
+      <div class="startMenuRecommended">
+        <div class="startMenuRecommended-Icon ml25">
+          <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="40px" height="40px">
+            <path d="M 25 4 L 4 17.34375 L 4 32.652344 L 25 46 L 46 32.65625 L 46 17.34375 Z M 25 29.183594 L 19.066406 25.070313 L 25 21.023438 L 30.933594 25.070313 Z M 27 17.605469 L 27 9.949219 L 40.429688 18.484375 L 34.410156 22.65625 Z M 23 17.605469 L 15.589844 22.65625 L 9.570313 18.484375 L 23 9.949219 Z M 12.09375 25.042969 L 8 27.832031 L 8 22.203125 Z M 15.570313 27.453125 L 23 32.605469 L 23 40.050781 L 9.589844 31.527344 Z M 27 32.605469 L 34.429688 27.453125 L 40.410156 31.527344 L 27 40.050781 Z M 37.90625 25.042969 L 42 22.203125 L 42 27.832031 Z" />
+          </svg>
+        </div>
+        <div class="startMenuRecommended-Text ml10">
+          Windows 11 UI Design <br /> <span class="lightText">2h ago</span>
+        </div>
+      </div>
+      <div class="startMenuRecommended">
+        <div class="startMenuRecommended-Icon">
+          <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/word_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+        </div>
+        <div class="startMenuRecommended-Text">
+          Word<br /> <span class="lightText">12h ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="shutdownRow">
+      <div class="profilePicture">
+      </div>
+      <div class="profileName">
+        Chandula Janith
+      </div>
+      <div class="powerButton">
+        <i class="ms-Icon ms-Icon--PowerButton" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+  <div class="panel note-panel" id="welcomenote" onmousedown="FocusWindow('welcome')">
+    <div class="header noselect">
+      <span class="lightText"><i class="ms-Icon ms-Icon--QuickNoteSolid headerTitleIcon" aria-hidden="true"></i><span class="headerTitleText"> Welcome to Windows 11 UI</span></span>
+      <div class="headerIcons">
+        <i class="ms-Icon ms-Icon--ChromeMinimize" id="welcomeMinimize" aria-hidden="true" onClick="MinimizeWindow('welcome')"></i>
+        <i class="ms-Icon ms-Icon--ChromeRestore" aria-hidden="true"></i>
+        <i class="ms-Icon ms-Icon--ChromeClose" id="welcomeClose" aria-hidden="true" onClick="CloseWindow('welcome')"></i>
+      </div>
+    </div>
+    <div class="panel-body" id="panelBody">
+      <div class="headerImage parallax noselect" data-depth=".1" id="headerImage">
+        <div class="headerImageOverlay">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 443.704 443.704" version="1.1">
+            <g id="surface1">
+              <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 227.570313 307.621094 L 227.570313 387.675781 L 387.675781 387.675781 L 387.675781 227.570313 L 227.570313 227.570313 Z M 56.03125 307.621094 L 56.03125 387.675781 L 216.132813 387.675781 L 216.132813 227.570313 L 56.03125 227.570313 Z M 227.570313 136.082031 L 227.570313 216.132813 L 387.675781 216.132813 L 387.675781 56.03125 L 227.570313 56.03125 Z M 56.03125 136.082031 L 56.03125 216.132813 L 216.132813 216.132813 L 216.132813 56.03125 L 56.03125 56.03125 Z M 56.03125 136.082031 " />
+            </g>
+          </svg>
+          &nbsp;Windows 11
+        </div>
+      </div>
+      <div class="noteBodyText">
+        <p>Welcome to my build of the Windows 11 UI. I tried my best to recreate the Windows 11 UI based on the Fluent Design documentation and the recently released Windows 11 preview video. At the time of making this, that's all I had to go off. I'm curious to see how far I missed the mark once Windows 11 is publicly available. Have fun and play around!</p>
+        <p>Here are some things you can explore:</p>
+        <ul>
+          <li>
+            Check the weather by clicking the cloud in the taskbar
+          </li>
+          <li>
+            Open the Windows start menu
+          </li>
+          <li>
+            Drag windows around, close them, minimize them. Window states will update, z-indexes will update, windows will animate in and out depending on if you're restoring the window, closing the window, or minimizing the window.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel settingsPanel" id="settingswindow" onmousedown="FocusWindow('settings')" style="display:none;">
+    <div class="header noselect">
+      <span class="lightText"><i class="ms-Icon ms-Icon--Settings headerTitleIcon" aria-hidden="true"></i><span class="headerTitleText"> Settings</span></span>
+      <div class="headerIcons">
+        <i class="ms-Icon ms-Icon--ChromeMinimize" id="welcomeMinimize" aria-hidden="true" onClick="MinimizeWindow('settings')"></i>
+        <i class="ms-Icon ms-Icon--ChromeRestore" aria-hidden="true"></i>
+        <i class="ms-Icon ms-Icon--ChromeClose" id="welcomeClose" aria-hidden="true" onClick="CloseWindow('settings')"></i>
+      </div>
+    </div>
+    <div class="panel-body settingsPanelBody noselect" id="panelBody">
+      <div class="settingsProfileRow">
+        <div class="profilePicture-settings">
+        </div>
+        <div class="settingsName">
+          Chandula Janith <br /> <small class="lightText">janithc783@gmail.com</small>
+        </div>
+      </div>
+
+      <div class="settingsLeftColumn">
+        <div class="settingsItem active">
+          <i class="ms-Icon ms-Icon--System" aria-hidden="true"></i> System
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--InternetSharing" aria-hidden="true"></i> Bluetooth
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Globe" aria-hidden="true"></i> Network & internet
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Brush" aria-hidden="true"></i> Personalization
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--AppIconDefaultAdd" aria-hidden="true"></i> Apps
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--People" aria-hidden="true"></i> Account
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Clock" aria-hidden="true"></i> Time & language
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Game" aria-hidden="true"></i> Gaming
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--EaseOfAccess" aria-hidden="true"></i> Accessibility
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Shield" aria-hidden="true"></i> Privacy & security
+        </div>
+        <div class="settingsItem">
+          <i class="ms-Icon ms-Icon--Sync" aria-hidden="true"></i> Windows update
+        </div>
+      </div>
+      <div class="settingsRightColumn">
+        <div class="themePreview">
+        </div>
+        <div class="themeSelect">
+          Select a theme to apply
+          <div class="lightThemePick active">
+          </div>
+          <div class="darkThemePick">
+          </div>
+        </div>
+        <div class="settingsOptions">
+          <div class="settingsSystemOption">
+            <i class="ms-Icon ms-Icon--PhotoCollection systemIcon" aria-hidden="true"></i>
+            <div class="settingsSystemOptionText">
+              Background <br />
+              <small class="lightText">Background image, color, slideshow</small>
+            </div>
+          </div>
+          <div class="settingsSystemOption">
+            <i class="ms-Icon ms-Icon--Color systemIcon" aria-hidden="true"></i>
+            <div class="settingsSystemOptionText">
+              Colors <br />
+              <small class="lightText">Background image, color, slideshow</small>
+            </div>
+          </div>
+          <div class="settingsSystemOption">
+            <i class="ms-Icon ms-Icon--Lock systemIcon" aria-hidden="true"></i>
+            <div class="settingsSystemOptionText">
+              Themes <br />
+              <small class="lightText">Background image, color, slideshow</small>
+            </div>
+          </div>
+          <div class="settingsSystemOption">
+            <i class="ms-Icon ms-Icon--PhotoCollection systemIcon" aria-hidden="true"></i>
+            <div class="settingsSystemOptionText">
+              Themes <br />
+              <small class="lightText">Background image, color, slideshow</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="taskbar noselect">
+  <div class="taskbarIconWrapper" id="startmenuTaskbarIcon" onClick="TaskbarIconClick('startMenu')">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 443.704 443.704" version="1.1">
+      <g id="surface1">
+        <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,47.099304%,83.099365%);fill-opacity:1;" d="M 227.570313 307.621094 L 227.570313 387.675781 L 387.675781 387.675781 L 387.675781 227.570313 L 227.570313 227.570313 Z M 56.03125 307.621094 L 56.03125 387.675781 L 216.132813 387.675781 L 216.132813 227.570313 L 56.03125 227.570313 Z M 227.570313 136.082031 L 227.570313 216.132813 L 387.675781 216.132813 L 387.675781 56.03125 L 227.570313 56.03125 Z M 56.03125 136.082031 L 56.03125 216.132813 L 216.132813 216.132813 L 216.132813 56.03125 L 56.03125 56.03125 Z M 56.03125 136.082031 " />
+      </g>
+    </svg>
+  </div>
+  <div class="taskbarIconWrapper" id="settingsTaskbarIcon" onClick="TaskbarIconClick('settings')">
+    <i class="ms-Icon ms-Icon--Settings taskbarIcon taskbarItem"  style="font-size:1.8rem;position:relative;top:3px;" aria-hidden="true"></i>
+    <div class="taskbarIconIndicator" style="display:none;" id="settingsTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/word_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/powerpoint_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/excel_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/office_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/outlook_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper">
+    <img src="https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/teams_48x1.svg" width="35" height="35" class="taskbarItem" alt="Word product icon" />
+    <div class="taskbarIconIndicator" style="display:none;" id="startMenuTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper active focused" id="noteTaskbarIcon" onClick="TaskbarIconClick('welcome')">
+    <i class="ms-Icon ms-Icon--QuickNoteSolid taskbarIcon taskbarItem taskbarNoteIcon" style="font-size:1.8rem;position:relative;top:3px;" aria-hidden="true"></i>
+    <div class="taskbarIconIndicator" id="noteTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarIconWrapper" id="weatherTaskbarIcon" onClick="TaskbarIconClick('weather')">
+    <i class="ms-Icon ms-Icon--CloudWeather taskbarIcon taskbarItem" aria-hidden="true"></i>
+    <div class="taskbarIconIndicator" style="display:none;" id="weatherTaskbarIndicator"></div>
+  </div>
+  <div class="taskbarTemp">
+    65°
+  </div>
+  <div class="taskbarTime">
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

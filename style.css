@@ -1,0 +1,576 @@
+@import url("http://fonts.cdnfonts.com/css/segoe-ui-4");
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/5616.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  border-radius: 5px;
+  width: 700px;
+  height: 500px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.13), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.11);
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.panel:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.4;
+  background-color: #fff;
+  border-radius: 5px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/bg--acrylic-light.png");
+}
+.panel .panel-right {
+  width: 218px;
+  background: rgba(255, 255, 255, 0);
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  height: 269px;
+  border-bottom-right-radius: 5px;
+  padding: 34px 34px;
+}
+.panel .panel-left {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  padding: 50px 40px 0 40px;
+}
+
+.panel-left-highlow-text {
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+
+.panel-left-locationdate-text {
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.panel-left-day {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: -10px;
+  padding: 10px;
+  width: 130px;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.startMenuPanel {
+  bottom: 75px;
+  height: 700px;
+}
+
+.startMenuContainer {
+  padding: 50px 50px 25px 50px;
+}
+
+.shutdownRow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(180, 180, 180, 0.25);
+  border-top: 1px solid rgba(163, 163, 163, 0.65);
+  height: 80px;
+}
+
+.profilePicture {
+  background-image: url("https://media-exp1.licdn.com/dms/image/C5603AQF2iQHPNGx4dw/profile-displayphoto-shrink_200_200/0/1634986415083?e=1642636800&v=beta&t=FaPAw9jM_Ntp8TFdq1km4Fo9sIVH3ZoMsvCe_QB4kow");
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: contain;
+  position: absolute;
+  left: 75px;
+  top: 20px;
+}
+
+.settingsPanelBody {
+  padding: 30px;
+  overflow: visible !important;
+}
+
+.settingsPanel {
+  height: 596px;
+}
+
+.profilePicture-settings {
+  background-image: url("https://media-exp1.licdn.com/dms/image/C5603AQF2iQHPNGx4dw/profile-displayphoto-shrink_200_200/0/1634986415083?e=1642636800&v=beta&t=FaPAw9jM_Ntp8TFdq1km4Fo9sIVH3ZoMsvCe_QB4kow");
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: contain;
+  top: 20px;
+  display: inline-block;
+}
+
+.settingsName {
+  display: inline-block;
+  line-height: 1rem;
+  opacity: 0.8;
+  position: absolute;
+  top: 65px;
+  margin-left: 5px;
+}
+
+.settingsLeftColumn {
+  padding: 30px 0;
+  width: 30%;
+  display: inline-block;
+}
+
+.settingsItem {
+  color: rgba(0, 0, 0, 0.8);
+  padding: 4px 10px;
+}
+.settingsItem.active {
+  background: white;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(210, 210, 210, 0.25) 100%);
+  border-left: 2px solid #226cb1;
+}
+
+.settingsRightColumn {
+  width: 69%;
+  display: inline-block;
+}
+
+.themePreview {
+  background-image: url("https://www.bleepstatic.com/images/news/Microsoft/windows-11/leak/new-default-wallpaper.jpg");
+  background-size: contain;
+  width: 160px;
+  height: 100px;
+  position: absolute;
+  top: 137px;
+  margin-left: 20px;
+}
+
+.themeSelect {
+  position: absolute;
+  top: 137px;
+  left: 450px;
+}
+
+.lightThemePick {
+  background-image: url("https://www.bleepstatic.com/images/news/Microsoft/windows-11/leak/new-default-wallpaper.jpg");
+  margin-top: 20px;
+  width: 92px;
+  height: 58px;
+  display: inline-block;
+  background-size: contain;
+  border: 3px solid rgba(255, 255, 255, 0.45);
+  background-repeat: no-repeat;
+}
+.lightThemePick.active {
+  border: 3px solid #226cb1;
+}
+
+.darkThemePick {
+  background-image: url("https://cdn.vox-cdn.com/uploads/chorus_asset/file/22661965/img19.jpg");
+  margin-top: 20px;
+  width: 92px;
+  height: 58px;
+  display: inline-block;
+  background-size: contain;
+  border: 3px solid rgba(255, 255, 255, 0.45);
+  background-repeat: no-repeat;
+}
+.darkThemePick.active {
+  border: 3px solid #226cb1;
+}
+
+.systemIcon {
+  font-size: 3rem;
+}
+
+.settingsSystemOption {
+  margin-top: 2px;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 15px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.settingsOptions {
+  margin-left: 20px;
+  position: relative;
+  top: 110px;
+}
+
+.settingsSystemOptionText {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  left: 15px;
+}
+
+.profileName {
+  position: absolute;
+  left: 135px;
+  opacity: 0.8;
+  top: 28px;
+}
+
+.powerButton {
+  font-size: 1.7rem;
+  opacity: 0.5;
+  position: absolute;
+  right: 50px;
+  top: 25px;
+}
+
+.iconRow {
+  padding: 0 50px;
+}
+
+.startMenuIcon {
+  width: 15.6666666%;
+  display: inline-block;
+  text-align: center;
+}
+
+.startMenuRecommended {
+  width: 49%;
+  display: inline-block;
+}
+
+.startMenuRecommended-Icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.startMenuRecommended-Text {
+  opacity: 0.8;
+  display: inline-block;
+  height: 40px;
+}
+
+.startMenuIcon-Inner {
+  padding: 0 30px;
+}
+
+.allAppsButton {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  padding: 4px;
+  width: 80px;
+  text-align: center;
+  position: absolute;
+  right: 70px;
+  display: inline;
+  top: 50px;
+}
+
+.moreButton {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  padding: 4px;
+  width: 60px;
+  text-align: center;
+  position: absolute;
+  right: 70px;
+  display: inline;
+  top: 425px;
+}
+
+.startMenuIconText {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.weatherPanel {
+  height: 400px;
+  width: 460px;
+}
+
+.cloud {
+  background-image: url("https://i.pinimg.com/originals/60/a8/2c/60a82c6cf7fda046b291e6b2c78ea531.png");
+  width: 433px;
+  height: 433px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 180px;
+  top: 258px;
+  mix-blend-mode: none;
+  -webkit-filter: drop-shadow(8px 8px 20px rgba(0, 0, 0, 0.3));
+}
+
+.weatherTemperature {
+  font-size: 5.5rem;
+  opacity: 0.8;
+  line-height: 6rem;
+}
+
+.panel-body-scroll {
+  width: calc(100% - 4px);
+  display: inline-block;
+  overflow: auto;
+}
+
+.note-panel {
+  max-height: 500px;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 45px;
+  backdrop-filter: blur(15px);
+  padding: 5px;
+  text-align: center;
+  z-index: 1000;
+}
+.taskbar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.6;
+  background-color: #fff;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/bg--acrylic-light.png");
+}
+
+.taskbarTemp {
+  position: absolute;
+  display: inline-block;
+  top: 5px;
+  margin-left: -14px;
+  font-size: 0.6rem;
+}
+
+.taskbarIcon {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.taskbarTime {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+}
+
+.taskbarIconWrapper {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  vertical-align: top;
+  border-radius: 4px;
+  height: 35px;
+  transition: background-color 0.2s linear;
+}
+.taskbarIconWrapper.active {
+  background-color: rgba(255, 255, 255, 0.17);
+}
+.taskbarIconWrapper.focused, .taskbarIconWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.taskbarIconIndicator {
+  position: absolute;
+  left: 11px;
+  width: 19px;
+  height: 3px;
+  bottom: 3px;
+  background-color: #226cb1;
+  border-radius: 25%;
+  transform-origin: center;
+  transition: transform 0.2s linear;
+}
+.taskbarIconIndicator.unfocused {
+  transform: scaleX(0.3);
+  background-color: #999;
+}
+
+.windowsLogo {
+  background: #2ba0da;
+  background: linear-gradient(135deg, #2ba0da 0%, #3774c4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taskbarNoteIcon {
+  color: #123fbc;
+}
+
+.note {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333;
+  font-weight: 700;
+}
+
+.noteBodyText {
+  padding: 20px 60px;
+  color: #222222;
+}
+
+.panel-body {
+  max-height: 468px;
+  overflow-y: scroll;
+}
+
+.panel-body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.panel-body::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.panel-body::-webkit-scrollbar-thumb {
+  background-color: rgba(1, 2, 3, 0.2);
+}
+
+.lightText {
+  color: #444444;
+  font-size: 0.8rem;
+}
+
+.header {
+  color: #5e6469;
+  height: 33px;
+}
+.header > .headerIcons {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  text-align: right;
+  font-size: 0.8rem;
+}
+.header > .headerIcons > i {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  padding: 10px;
+}
+.header > .headerIcons > i:hover {
+  color: #222222;
+  background-color: rgba(250, 250, 250, 0.4);
+}
+
+.headerTitleIcon {
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 10px;
+  color: #123fbc;
+  margin-left: 10px;
+}
+
+.headerTitleText {
+  display: inline-block;
+  margin-top: -1px;
+  margin-left: 25px;
+  padding: 10px;
+}
+
+.notepadIcon {
+  height: 20px;
+}
+
+.headerImage {
+  background-image: url("https://www.bleepstatic.com/images/news/Microsoft/windows-11/leak/new-default-wallpaper.jpg");
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-position-y: -75px;
+}
+
+.headerImageOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px #000;
+  background-color: rgba(4, 27, 104, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.ml40 {
+  margin-left: 40px;
+}
+
+.ml25 {
+  margin-left: 25px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome, Edge, Opera and Firefox */
+}
+
+.zindex0 {
+  z-index: 10;
+}
+
+.zindex1 {
+  z-index: 20;
+}
+
+.zindex2 {
+  z-index: 30;
+}
+
+.zindex3 {
+  z-index: 40;
+}
