@@ -236,19 +236,20 @@ function UpdateZIndex(){
 }
 
 <!-- TASKBAR DATE / TIME -->
-var date = new Date();
-var today = formatAMPM(date);
-var calDate =
-  date.getMonth().toString() +
-  "/" +
-  date.getDate().toString() +
-  "/" +
-  date.getFullYear();
+function GetTime(){
+  var date = new Date();
+  var today = formatAMPM(date);
+  var month = date.getMonth();
+  month += 1;
+  var calDate =
+    month.toString() +
+    "/" +
+    date.getDate().toString() +
+    "/" +
+    date.getFullYear();
 
-$(".taskbarTime").html(today + "<br />" + calDate);
-
-
-updateTime();
+  $(".taskbarTime").html(today + "<br />" + calDate);
+}
 
 function formatAMPM(date) {
   var hours = date.getHours();
@@ -263,16 +264,10 @@ function formatAMPM(date) {
 
 function updateTime() {
   setTimeout(function () {
-    var date = new date (); 
-    var today =
-    formatAMPM(date);
-    var calDate =
-      date.getMonth().toString() +
-      "/" +
-      date.getDate().toString() +
-      "/" +
-      date.getFullYear();
-    $(".taskbarTime").html(today + "<br />" + calDate);
+    GetTime();
     updateTime();
   }, 60000);
 }
+
+GetTime();
+updateTime();
