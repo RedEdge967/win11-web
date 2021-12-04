@@ -18,6 +18,7 @@
 ![Capture30](https://user-images.githubusercontent.com/91379432/142870195-7e31083b-a38e-4d10-9db6-957ac731c3eb.PNG)
 ![Capture31](https://user-images.githubusercontent.com/91379432/142870234-36ee8a5b-6dbc-4638-b5c2-5dfbad77131a.PNG)
 
-
+## Can I Contribute?
+- Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to Fork or clone this and I appreciate it.
 
 Link: https://rededge967.github.io/win11-web/
