@@ -42,4 +42,4 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 ---
-Link: https://rededge967.github.io/win11-web/
+Link: https://v1-win11.vercel.app
