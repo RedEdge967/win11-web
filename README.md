@@ -42,4 +42,4 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 ---
-Link: https://win11web.vercel.app
+Link: https://win11-web.vercel.app
