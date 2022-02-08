@@ -17,7 +17,7 @@
 ```
 
 ## What is Win11-Web
-- Windows11-UI is a web based windows 11 simulator with some features.
+- Win11-Web is a web based windows 11 simulator with some features.
 ---
 > ### 🛑 This web simulation of windows 11 is not anyway affliated with Microsoft. and this is not windows cloud 365.
 ---
@@ -42,4 +42,4 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 ---
-Link: https://v1-win11.vercel.app
+Link: https://win11web.vercel.app
