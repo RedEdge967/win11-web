@@ -44,7 +44,7 @@
           Low 57° F<br />
         </div>
         <div class="panel-left-locationdate-text">
-          Colombo, <br />Sri Lanka<br /><br />
+          <p id="location"></p><br /><br />
         </div>
         <div class="panel-left-day">
           Tomorrow 74° <i class="ms-Icon ms-Icon--Sunny" aria-hidden="true"></i>
@@ -58,10 +58,9 @@
       </div>
     </div>
     <div class="panel-right">
-      <div class="weatherTemperature">65° F<br /><small>Cloudy</small></div>
+      <div class="weatherTemperature"><h1 id="temperature"></h1><br /><small>Cloudy</small></div>
     </div>
-    <div class="cloud">
-    </div>
+   <h2 id="description"></h2>
   </div>
   <div class="panel startMenuPanel noselect" style="display:none" id="startMenuPanel">
     <div class="startMenuContainer">
@@ -532,6 +531,7 @@
   </div>
 </div>
 <!-- partial -->
+  <script src="app.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script><script  src="./script.js"></script>
 
