@@ -4,7 +4,7 @@ function getWeather() {
   let location = document.getElementById("location");
 
   let api = "https://api.openweathermap.org/data/2.5/weather";
-  let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
+  let apiKey = "a80bb1050b3413a6b7fee1468c6b3e86";
 
   location.innerHTML = "Locating...";
 
@@ -31,7 +31,7 @@ function getWeather() {
         let temp = data.main.temp;
         temperature.innerHTML = temp + "° F";
         location.innerHTML =
-          data.name + " (" + latitude + "°, " + longitude + "°)";
+          data.name;
         description.innerHTML = data.weather[0].main;
       });
   }
