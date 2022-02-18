@@ -318,9 +318,9 @@ body {
 }
 
 .weatherTemperature {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   opacity: 0.8;
-  line-height: 0rem;
+  line-height: 6rem;
 }
 
 .panel-body-scroll {
