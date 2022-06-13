@@ -38,6 +38,7 @@
 <a href="https://github.com/RedEdge967/win11-web/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=RedEdge967/win11-web" />
 </a>
+
 Also got help from [Joshua Salazar](https://github.com/SalazarJosh)
 
 ## Can I [Contribute?](https://github.com/RedEdge967/win11-web/blob/master/CONTRIBUTING.md)
